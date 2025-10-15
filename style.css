@@ -1,0 +1,254 @@
+/* GLOBAL LAYOUT & RESET */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #f9e0b3;
+    border-bottom: 1px solid #333;
+    z-index: 1000;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+/* SECTION DASAR */
+section {
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
+
+/* LOGO & NAVIGASI */
+.logo {
+    border: 1px solid #000;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+}
+
+/* HERO */
+.hero {
+    background-color: #cdddfb;
+    border: 1px solid #000;
+    text-align: center;
+    padding: 100px 20px;
+    width: 100%;
+}
+
+/* TITLE */
+.section-title {
+    display: inline-block;
+    background: white;
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 10px 30px;
+    font-weight: bold;
+    margin: 20px auto;
+}
+
+/* SERVICES SECTION */
+.services {
+    background-color: #f9e7a9;
+    border: 1px solid #000;
+    text-align: center;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+.services-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.service-box {
+    width: 200px;
+    text-align: left;
+}
+
+/* ABOUT */
+.about {
+    background-color: #e8dff5;
+    border: 1px solid #000;
+    text-align: center;
+    padding: 60px 40px;
+    width: 100%;
+}
+
+.section-title {
+    display: inline-block;
+    background: white;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 8px 25px;
+    font-weight: 600;
+}
+
+.about-desc {
+    margin-top: 15px;
+    font-size: 15px;
+    color: #333;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 40px;
+    gap: 80px;
+}
+
+.about-text,
+.about-image {
+    width: 250px;
+    text-align: left;
+}
+
+.about-text h3,
+.about-image h3 {
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.about-image {
+    text-align: center;
+}
+
+.shape {
+    width: 120px;
+    height: 60px;
+    background: white;
+    border: 1px solid #000;
+    border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
+    margin: 10px auto 0;
+}
+
+/* CONTACT */
+.contact {
+    background-color: #d6e5d1;
+    border: 1px solid #000;
+    text-align: center;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+/* Form Contact */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+input {
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px;
+    width: 48%;
+    box-sizing: border-box;
+}
+
+textarea {
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    height: 100px;
+    resize: none;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #005eff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 8px 20px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+button:hover {
+    background-color: #0046c3;
+}
+
+/* FOOTER */
+footer {
+    background-color: #fde5c0;
+    border: 1px solid #000;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .services-content, 
+    .about-content, 
+    .input-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-box, 
+    .about-text, 
+    .about-image, 
+    input, 
+    textarea {
+        width: 90%;
+    }
+
+    .shape {
+        width: 100px;
+        height: 50px;
+    }
+
+    form {
+        align-items: center;
+        margin-left: 0;
+    }
+}
