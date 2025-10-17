@@ -1,64 +1,87 @@
-/* --- HERO SECTION --- */
-.hero {
-  background: url("Aset/img/Gambar1.jpg") no-repeat center center/cover;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f9fafb;
+}
+
+/* HOME CAROUSEL */
+#homeCarousel {
+  position: relative;
+}
+
+.carousel-item img {
   height: 100vh;
-  position: relative;
+  object-fit: cover;
+  filter: brightness(70%) blur(0.5px); /* Sedikit lebih gelap dan samar */
 }
-.hero-overlay {
+
+/* Overlay gelap di atas gambar */
+.carousel-item .overlay {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.55);
-}
-.hero .container {
-  position: relative;
-  z-index: 2;
-}
-.hero h1, .hero p {
-  animation: fadeIn 1.5s ease;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45); /* tingkat kegelapan bisa diatur di sini */
+  z-index: 1;
 }
 
-/* --- NAVBAR --- */
-.navbar-nav .nav-link {
-  color: #2e5942 !important;
-  transition: color 0.3s, transform 0.3s;
+/* Caption di tengah layar dan muncul di atas overlay */
+.carousel-caption {
+  position: absolute;
+  top: 50%;          /* Tengah vertikal */
+  left: 50%;         /* Tengah horizontal */
+  transform: translate(-50%, -50%); /* Benar-benar pusat */
+  text-align: center;
+  z-index: 2;        /* Di atas overlay, tapi di bawah tombol carousel */
+  width: 100%;
+  padding: 0 20px;   /* Supaya teks tidak mentok di pinggir di layar kecil */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  pointer-events: none; /* <== ini penting */
 }
-.navbar-nav .nav-link:hover {
-  color: #00a676 !important;
+
+.carousel-caption h1 {
+  color: #fff;
+}
+
+.carousel-caption p {
+  color: #f8f9fa;
+}
+
+
+/* NAVBAR ACTIVE */
+.navbar .nav-link {
+  color: rgba(255,255,255,0.8);
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+  color: #fff !important;
+  font-weight: 600;
+}
+
+/* KAMAR */
+.kamar img {
+  height: 230px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.kamar:hover img {
   transform: scale(1.05);
 }
-header.navbar.scrolled {
-  background-color: #e8f3e8 !important;
-  transition: background-color 0.5s;
+
+/* FORM KONTAK */
+form {
+  border-radius: 10px;
 }
 
-/* --- CARD ROOM --- */
-.card {
-  border-radius: 15px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-/* --- ABOUT BUTTON --- */
-#about a.btn {
-  transition: all 0.3s ease;
-}
-#about a.btn:hover {
-  background-color: #00a676;
-  color: white;
-  transform: scale(1.05);
-}
-
-/* --- ANIMATIONS --- */
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(20px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-
-/* --- FOOTER --- */
+/* FOOTER */
 footer {
-  font-size: 14px;
+  font-size: 0.95rem;
+  line-height: 1.6;
 }

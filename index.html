@@ -1,84 +1,120 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kost Ranu Asri</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kost Ranu</title>
 
-  <!-- Bootstrap Offline -->
-  <link rel="stylesheet" href="Aset/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons & Custom CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ===== HEADER / NAVBAR ===== -->
-  <header class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" style="background-color:#f1f7ee;">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="Aset/img/KRlogo.jpg" alt="Logo Kost" class="rounded-circle border border-dark me-2" width="55" height="55">
-        <span class="fw-bold text-success">KOST RANU</span>
-      </a>
-
-      <!-- Triple Bar -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
-              aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand fw-bold" href="#">Kost Ranu</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <!-- Menu Navigasi -->
-      <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a href="#home" class="nav-link mx-2 fw-semibold">Home</a></li>
-          <li class="nav-item"><a href="#rooms" class="nav-link mx-2 fw-semibold">Kamar</a></li>
-          <li class="nav-item"><a href="#about" class="nav-link mx-2 fw-semibold">Tentang</a></li>
-          <li class="nav-item"><a href="#contact" class="nav-link mx-2 fw-semibold">Kontak</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kamar">Kamar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#statistik">Statistik</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
         </ul>
       </div>
     </div>
-  </header>
+  </nav>
 
-  <!-- ===== HERO SECTION ===== -->
-  <section id="home" class="hero d-flex align-items-center justify-content-center text-center text-white">
-    <div class="hero-overlay"></div>
-    <div class="container position-relative">
-      <h1 class="fw-bold mb-3 animate-fade">Selamat Datang di Kost Ranu</h1>
-      <p class="lead animate-fade-delay">Tempat nyaman, aman, dan strategis untuk mahasiswa & pekerja</p>
-      <a href="#rooms" class="btn btn-light px-4 py-2 rounded-pill fw-bold mt-3">Lihat Kamar</a>
+  <!-- HOME SECTION -->
+  <section id="home" class="home">
+    <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+      <div class="carousel-inner">
+
+        <!-- Gambar 1 -->
+        <div class="carousel-item active">
+          <img src="Aset/img/Gambar4.png" class="d-block w-100" alt="Kost 1">
+          <div class="overlay"></div>
+          <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+            <h1 class="display-4 fw-bold" data-aos="fade-up">Selamat Datang di Kost Ranu</h1>
+            <p class="lead" data-aos="fade-up" data-aos-delay="200">
+              Kost nyaman dan strategis dekat kampus — solusi ideal untuk mahasiswa dan pekerja.
+            </p>
+          </div>
+        </div>
+
+        <!-- Gambar 2 -->
+        <div class="carousel-item">
+          <img src="Aset/img/Gambar3.jpg" class="d-block w-100" alt="Kost 2">
+          <div class="overlay"></div>
+          <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+            <h1 class="display-4 fw-bold" data-aos="fade-up">Mau Kost Eksklusif Dengan Harga Affordable?</h1>
+            <h2 class="lead" data-aos="fade-up" data-aos-delay="200">
+              Kost Ranu Solusinya!
+            </h2>
+          </div>
+        </div>
+
+        <!-- Gambar 3 -->
+        <div class="carousel-item">
+          <img src="Aset/img/Gambar1.jpg" class="d-block w-100" alt="Kost 3">
+          <div class="overlay"></div>
+          <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+            <h1 class="display-4 fw-bold" data-aos="fade-up">Yuk Cari Tau Tentang Kami!</h1>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tombol Navigasi Carousel -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
     </div>
   </section>
 
-  <!-- ===== ROOMS SECTION ===== -->
-  <section id="rooms" class="py-5 bg-light text-center">
+  <!-- KAMAR -->
+  <section id="kamar" class="py-5">
     <div class="container">
-      <h2 class="fw-bold mb-4 text-success">Kamar Tersedia</h2>
+      <h2 class="text-center text-success mb-4" data-aos="fade-down">Kamar Kost</h2>
       <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card border-0 shadow-sm">
-            <img src="Aset/img/kamar1.jpg" class="card-img-top" alt="Kamar 1">
-            <div class="card-body">
-              <h5 class="card-title">Kamar Standar</h5>
-              <p class="card-text">Kamar dengan kasur single, lemari, dan meja belajar. Cocok untuk mahasiswa.</p>
-              <button class="btn btn-success">Rp 750.000 / bulan</button>
+        <div class="col-md-4" data-aos="zoom-in">
+          <div class="card h-100 shadow kamar">
+            <img src="Aset/img/K1.png" class="card-img-top" alt="Kamar Standar">
+            <div class="card-body text-center">
+              <h5 class="card-title text-success">Kamar Standar</h5>
+              <p class="card-text">Rp 800.000 / bulan</p>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card border-0 shadow-sm">
-            <img src="Aset/img/kamar2.jpg" class="card-img-top" alt="Kamar 2">
-            <div class="card-body">
-              <h5 class="card-title">Kamar Deluxe</h5>
-              <p class="card-text">Kamar lebih luas dengan kasur queen, kipas angin, dan kamar mandi dalam.</p>
-              <button class="btn btn-success">Rp 1.000.000 / bulan</button>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="150">
+          <div class="card h-100 shadow kamar">
+            <img src="Aset/img/K2.jpg" class="card-img-top" alt="Kamar Deluxe">
+            <div class="card-body text-center">
+              <h5 class="card-title text-success">Kamar Deluxe</h5>
+              <p class="card-text">Rp 1.200.000 / bulan</p>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card border-0 shadow-sm">
-            <img src="Aset/img/kamar3.jpg" class="card-img-top" alt="Kamar 3">
-            <div class="card-body">
-              <h5 class="card-title">Kamar Premium</h5>
-              <p class="card-text">Dilengkapi AC, TV, dan Wi-Fi. Nyaman untuk profesional dan pekerja.</p>
-              <button class="btn btn-success">Rp 1.500.000 / bulan</button>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+          <div class="card h-100 shadow kamar">
+            <img src="Aset/img/Kamar3.jpg" class="card-img-top" alt="Kamar Premium">
+            <div class="card-body text-center">
+              <h5 class="card-title text-success">Kamar Premium</h5>
+              <p class="card-text">Rp 1.800.000 / bulan</p>
             </div>
           </div>
         </div>
@@ -86,70 +122,80 @@
     </div>
   </section>
 
-  <!-- ===== ABOUT SECTION ===== -->
-  <section id="about" class="py-5">
-    <div class="container text-center">
-      <h2 class="fw-bold mb-4 text-success">Tentang Kost Kami</h2>
+  <!-- STATISTIK -->
+  <section id="statistik" class="py-5 bg-light">
+    <div class="container text-center" data-aos="fade-up">
+      <h2 class="text-success mb-4">Statistik Kost Ranu</h2>
+      <div class="mb-4">
+        <canvas id="chartKamar" height="150"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- TENTANG -->
+  <section id="tentang" class="py-5">
+    <div class="container" data-aos="fade-right">
+      <h2 class="text-center text-success mb-5">Tentang Kost Kami</h2>
       <div class="row align-items-center">
         <div class="col-md-6 mb-4 mb-md-0">
-          <img src="Aset/img/Gambar2.jpg" alt="Tentang Kami" class="img-fluid rounded shadow-lg">
+          <img src="Aset/img/Gambar2.jpg" class="img-fluid rounded shadow" alt="Kost Ranu">
         </div>
-        <div class="col-md-6 text-start">
-          <h4 class="fw-semibold">Kenyamanan dan Keamanan Prioritas Kami</h4>
-          <p>Kost Ranu didesain untuk memberikan lingkungan yang nyaman dan bersih. Setiap kamar dilengkapi fasilitas modern dan area parkir luas. Kami berlokasi strategis dekat kampus dan fasilitas umum.</p>
+        <div class="col-md-6">
+          <h4 class="fw-bold">Kenyamanan dan Keamanan Prioritas Kami</h4>
+          <p>Kost Ranu didesain untuk memberikan lingkungan yang nyaman dan bersih. Setiap kamar dilengkapi fasilitas modern dan area parkir luas.</p>
           <ul>
             <li>Lingkungan tenang dan aman</li>
             <li>Wi-Fi berkecepatan tinggi</li>
             <li>Parkir luas</li>
             <li>Petugas kebersihan harian</li>
           </ul>
-                    <a href="https://www.google.com/maps/place/Universitas+Brawijaya/" 
-             target="_blank" 
-             class="btn btn-outline-success mt-3 px-4">
-             📍 Lihat Lokasi
+          <a href="https://goo.gl/maps/example" target="_blank" class="btn btn-outline-success mt-3">
+            <i class="bi bi-geo-alt-fill me-1"></i> Lihat Lokasi
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== CONTACT SECTION ===== -->
-  <section id="contact" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="fw-bold text-center text-success mb-4">Hubungi Kami</h2>
-      <form class="mx-auto" style="max-width: 600px;">
-        <div class="mb-3">
-          <label class="form-label">Nama</label>
-          <input type="text" class="form-control" placeholder="Masukkan nama Anda">
+  <!-- KONTAK -->
+  <section id="kontak" class="py-5 bg-light">
+    <div class="container" data-aos="zoom-in">
+      <h2 class="text-center text-success mb-4">Hubungi Kami</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <form class="bg-white p-4 shadow rounded">
+            <div class="mb-3">
+              <label class="form-label fw-bold">Nama</label>
+              <input type="text" class="form-control" placeholder="Masukkan nama Anda" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-bold">Email</label>
+              <input type="email" class="form-control" placeholder="Masukkan email Anda" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-bold">Pesan</label>
+              <textarea class="form-control" rows="5" placeholder="Tulis pesan Anda"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Kirim</button>
+          </form>
         </div>
-        <div class="mb-3">
-          <label class="form-label">Email</label>
-          <input type="email" class="form-control" placeholder="Masukkan email Anda">
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Pesan</label>
-          <textarea class="form-control" rows="4" placeholder="Tulis pesan Anda"></textarea>
-        </div>
-        <button type="submit" class="btn btn-success w-100">Kirim</button>
-      </form>
+      </div>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="text-center py-4 text-white" style="background-color:#2e5942;">
-    <p class="mb-0">&copy; 2025 Kost Ranu | Semua Hak Dilindungi</p>
-    <small>Instagram: @kost_ranu | WhatsApp: 0812-3456-7890</small>
+  <!-- FOOTER -->
+  <footer class="bg-success text-white text-center py-4">
+    <p class="mb-1 fw-bold">Kontak Kami</p>
+    <p class="mb-1">Alamat: Jl. Melati No. 123, Surabaya</p>
+    <p class="mb-1">Telepon: 0812-3456-7890</p>
+    <p class="mb-1">Email: info@kostranu.com</p>
+    <p class="mt-3 mb-0">© 2025 Kost Ranu. Semua Hak Dilindungi.</p>
   </footer>
 
-  <!-- Bootstrap JS Offline -->
-  <script src="Aset/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Navbar Scroll Effect -->
-  <script>
-    window.addEventListener("scroll", function() {
-      const header = document.querySelector("header.navbar");
-      header.classList.toggle("scrolled", window.scrollY > 50);
-    });
-  </script>
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
