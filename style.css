@@ -15,7 +15,7 @@ body {
 .carousel-item img {
   height: 100vh;
   object-fit: cover;
-  filter: brightness(70%) blur(0.5px); /* Sedikit lebih gelap dan samar */
+  filter: brightness(70%) blur(0.5px);
 }
 
 /* Overlay gelap di atas gambar */
@@ -25,22 +25,21 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.45); /* tingkat kegelapan bisa diatur di sini */
+  background: rgba(0, 0, 0, 0.45);
   z-index: 1;
 }
 
-/* Caption di tengah layar dan muncul di atas overlay */
 .carousel-caption {
   position: absolute;
-  top: 50%;          /* Tengah vertikal */
-  left: 50%;         /* Tengah horizontal */
-  transform: translate(-50%, -50%); /* Benar-benar pusat */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  z-index: 2;        /* Di atas overlay, tapi di bawah tombol carousel */
+  z-index: 2;
   width: 100%;
-  padding: 0 20px;   /* Supaya teks tidak mentok di pinggir di layar kecil */
+  padding: 0 20px;   
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
-  pointer-events: none; /* <== ini penting */
+  pointer-events: none;
 }
 
 .carousel-caption h1 {
